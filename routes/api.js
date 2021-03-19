@@ -79,6 +79,7 @@ module.exports = function (app) {
       }
 
       delete stockData.ipLikedList;
+      delete stockData._id;
 
       return res.json({ stockData });
     } else {
@@ -112,6 +113,7 @@ module.exports = function (app) {
         }
 
         delete stockInfo.ipLikedList;
+        delete stockInfo._id;
 
         stockData.push(stockInfo);
       }
