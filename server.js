@@ -20,11 +20,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   helmet({
-    // contentSecurityPolicy: {
-    // directives: {
-    // defaultSrc: ["'self'"],
-    // },
-    // },
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'", "https://fcc-stockchecker-app.herokuapp.com/"],
+      },
+    },
     xssFilter: true,
     hidePoweredBy: true,
     frameguard: {
