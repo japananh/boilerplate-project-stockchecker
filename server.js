@@ -31,6 +31,7 @@ app.use(
           "'self'",
           "https://fcc-stockchecker-app.herokuapp.com/",
           "https://cloud.iexapis.com/",
+          "https://code.jquery.com/jquery-2.2.1.min.js",
         ],
       },
     },
