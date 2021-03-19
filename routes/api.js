@@ -102,7 +102,6 @@ module.exports = function (app) {
           stockInfo = { ...newStock };
         } else {
           if (like && !stockInfo.ipLikedList.includes(ip)) {
-            console.log("udpate like -------", like, stockInfo);
             const updatedStock = await updateStock(stockSymbol, ip);
             if (updatedStock) stockInfo.ipLikedList.push(ip);
           }

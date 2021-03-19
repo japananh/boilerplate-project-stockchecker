@@ -22,7 +22,16 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'", "https://fcc-stockchecker-app.herokuapp.com/"],
+        styleSrc: [
+          "'self'",
+          "https://fcc-stockchecker-app.herokuapp.com/",
+          "https://cloud.iexapis.com/",
+        ],
+        scriptSrc: [
+          "'self'",
+          "https://fcc-stockchecker-app.herokuapp.com/",
+          "https://cloud.iexapis.com/",
+        ],
       },
     },
     xssFilter: true,
